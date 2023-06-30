@@ -22,3 +22,7 @@ function openLoginForm()
 
 
 
+  function toggleNav() {
+    var navbar = document.getElementById("navbar");
+    navbar.classList.toggle("collapsed");
+  }
