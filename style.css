@@ -11,7 +11,7 @@
     background-attachment: fixed;
     padding-top: 30px;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 38px;
     color: whitesmoke;
     
   }
@@ -30,6 +30,7 @@
 .navbar {
   background-color: rgb(48, 58, 66);
   border-radius: 5px;
+  
 }
 
 .navbar ul {
@@ -43,12 +44,15 @@
 .navbar li {
   font-size: large;
   margin: 0 15px;
+  float: left;
 }
 
 .navbar li a {
-  padding: 2px 12px;
+  padding: 4px 2px;
   color: white;
   text-decoration: none;
+  margin: auto;
+  float: left;
 }
 
 .navbar li a:hover {
@@ -65,22 +69,24 @@
 }
 
 
+/* Rest of your existing CSS */
+
 @media only screen and (max-width: 768px) {
-  .navbar ul {
+  .navbar ul.collapsed {
     display: none;
   }
-  
+
   .navbar.collapsed #navLinks {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .navbar.collapsed .toggle-button {
     display: block;
   }
-  
 }
+
 
 
 .login-btn {
