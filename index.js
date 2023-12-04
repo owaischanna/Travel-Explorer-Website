@@ -22,7 +22,31 @@ function openLoginForm()
 
 
 
-  function toggleNav() {
-    var navbar = document.getElementById("navbar");
-    navbar.classList.toggle("collapsed");
-  }
+  // Function to toggle the mobile navigation menu
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggleButton = document.querySelector(".toggle-button");
+    var navLinks = document.getElementById("navLinks");
+  
+    toggleButton.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  
+    // Close the mobile menu when a link is clicked
+    var navLinksList = document.querySelectorAll(".nav-link");
+    navLinksList.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+      });
+    });
+  
+    // Close the mobile menu when clicking outside the menu or toggle button
+    document.addEventListener("click", function (event) {
+      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+        navLinks.classList.remove("show");
+      }
+    });
+  });
+  
+
+
+  
